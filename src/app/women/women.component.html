@@ -1,0 +1,33 @@
+<section>
+  <h2 class="text-center my-5">
+    women products
+  </h2>
+  <div class="container">
+    <div class="row g-3">
+  @for (product of womendata; track $index) {
+    <div class="col-md-3 position-relative">
+      <div class="item border p-2 h-100 ">
+<img [src]="product.image" class="w-100 h-50"  [alt]="product.title">
+
+    <h3 class="my-5">{{product.category}}</h3>
+    <h4 class="my-5 text-muted h6">{{product.title.split(" ",2)}}</h4>
+
+
+  <div class="d-flex justify-content-between align-items-center my-5  position-absolute top-75">
+    <div class="c"><span>{{product.price}} EGP</span></div>
+
+    <div >
+    <span><i class="fas fa-star text-warning "></i></span>
+    <span class="text-muted">{{product.rating.rate}}</span>
+    </div>
+
+</div>
+
+
+      </div>
+    </div>
+  }
+    </div>
+  </div>
+</section>
+

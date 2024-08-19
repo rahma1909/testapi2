@@ -1,0 +1,9 @@
+{
+  "routes": [
+    "/electronics",
+    "/home",
+    "/jewelery",
+    "/men's clothing",
+    "/women's clothing"
+  ]
+}

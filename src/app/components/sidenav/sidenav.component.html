@@ -1,0 +1,29 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <div class="left">
+      <button mat-button class="btn btn-white text-white"
+        (click)="opened =!opened"><mat-icon>menu</mat-icon></button>
+    </div>
+    <div class="right">
+      <img src=".\assets\images\logo.jpg" width="100px" class="rounded-circle"
+        alt>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container >
+  <mat-sidenav [(opened)]="opened" mode="side">
+    <div (click)="growHeight()" class="my-4 p-2">    <a routerLink="/home" class="text-decoration-none text-black  ">home</a></div>
+    <div (click)="growHeight()" class="my-4 p-2">    <a  routerLink="/men's clothing" class="text-decoration-none text-black  ">men's clothing</a></div>
+    <div (click)="growHeight()" class="mb-4 p-2">    <a  routerLink="/jewelery" class="text-decoration-none text-black  ">jewelery</a></div>
+
+    <div (click)="growHeight()" class="mb-4 p-2">    <a  routerLink="/electronics" class="text-decoration-none text-black  ">electronics</a></div>
+    <div (click)="growHeight()" class="mb-4 p-2">    <a  routerLink="/women's clothing" class="text-decoration-none text-black ">women's clothing</a></div>
+  </mat-sidenav>
+  <mat-sidenav-content #content>
+
+<router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
